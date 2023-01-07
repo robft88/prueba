@@ -4,14 +4,6 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: MainComponent,
-  //   children: [
-  //     { path: 'detail/:id', component: DetailComponent },
-  //     { path: '**', redirectTo: '' }
-  //   ]
-  // }
   {
     path: 'list',
     component: MainComponent,
