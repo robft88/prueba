@@ -1,0 +1,25 @@
+<section class="photo-container">
+    <figure [ngClass]="{'liked': checkIfLike(photo.id)}" class="detail">
+        <img class="detail__img" src="../../../../assets/img/{{photo.id}}.jpg" alt="">
+    </figure>
+    <section class="detail__info">
+        <button (click)="giveLike(photo)" [disabled]="userAlreadyVoted()">
+            <i *ngIf="!checkIfLike(photo.id)" class="fa-regular fa-heart heart heart-no-like"></i>
+            <i *ngIf="checkIfLike(photo.id)" class="fa-solid fa-heart heart heart-like"></i>
+        </button>
+        <article class="detail__description">
+            <span class="detail__title">{{photo.title}}</span>
+            <div></div>
+            <span *ngIf="photo.format != ''" class="detail__format">Disponible en
+                <strong>{{photo.format}}</strong></span>
+        </article>
+        <div class="detail__btns">
+
+            <a rel="noreferrer noopener"
+                href="mailto:figueiraphoto.art@gmail.com?subject=%F0%9D%97%A6%F0%9D%97%AE%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%B2%F0%9D%97%BB%F0%9D%98%87%F0%9D%97%AE%2C%20selecci%C3%B3n%20de%20obra&body=Hola%20Miguel%20%C3%81ngel.%0D%0A%0D%0AEstoy%20interesadx%20en%20la%20obra%20%F0%9D%97%A6%F0%9D%97%AE%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%B2%F0%9D%97%BB%F0%9D%98%87%F0%9D%97%AE%2C%20el%20cuadro%20%22{{photo.title}}%22%0D%0A%0D%0AUn%20saludo%2C">
+                <i class="fa-regular fa-envelope email"></i>
+            </a>
+        </div>
+
+    </section>
+</section>

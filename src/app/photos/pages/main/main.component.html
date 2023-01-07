@@ -1,0 +1,25 @@
+<app-header [showBackBtn]="false" class="header"></app-header>
+<app-profile-info></app-profile-info>
+<main class="container">
+    <div class="main">
+        <section class="vote">
+            <ng-template [ngIf]="!userAlreadyVoted()">
+                <div class="vote__info">
+                    <span class="vote__question">Elige las 3 fotos que más te hayan gustado.</span>
+                    <span class="vote__question">Solo puedes votar una vez.</span>
+                    <span class="vote__question">¡Quiero conocer tu opinión!</span>
+                    <span class="vote__question"><strong>#ExpoSapienza</strong></span>
+                </div>
+                <button class="btn vote__btn" [disabled]="!check3PhotosLike()" (click)="sendInfo()">
+                    <span>Votar</span>
+                </button>
+            </ng-template>
+            <ng-template [ngIf]="userAlreadyVoted()">
+                <i style="font-size: 4rem;" class="fa-regular fa-face-smile"></i>
+                <span>Gracias por tu voto!</span>
+            </ng-template>
+        </section>
+        <app-photo-list [photoList]="photoList" class="photos-container"></app-photo-list>
+    </div>
+    <a href="#" [routerLink]="['/admin/dashboard/chart']">metete aqui weon</a>
+</main>
