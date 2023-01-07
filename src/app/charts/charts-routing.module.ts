@@ -6,7 +6,7 @@ import { TableComponent } from './pages/table/table.component';
 
 const routes: Routes = [
   {
-    path: 'dashboard',
+    path: '',
     component: AdminComponent,
     children: [
       { path: 'chart', component: ChartComponent },
