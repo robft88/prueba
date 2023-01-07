@@ -322,8 +322,13 @@ h4 {
   width: 40%;
 }
 
+.total-votes-title {
+  color: #b5b5b5;
+}
+
 .total-votes {
   font-size: 2rem;
+  color: var(--color-1);
 }
 
 .summary__list-container {
@@ -331,6 +336,7 @@ h4 {
 }
 
 .summary__list-title {
+  color: var(--color-1);
   display: inline-block;
   width: 100%;
   padding: 1rem;
@@ -374,8 +380,8 @@ h4 {
 }
 
 .active {
-  color: black !important;
-  border: thin solid black !important;
+  color: var(--color-1) !important;
+  border: thin solid var(--color-1) !important;
 }
 
 @media screen and (max-width: 680px) {
