@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "coquitosApp": {
+    "figueiraPhotoApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "coquitosApp:build:production"
+              "browserTarget": "figueiraPhotoApp:build:production"
             },
             "development": {
-              "browserTarget": "coquitosApp:build:development"
+              "browserTarget": "figueiraPhotoApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "coquitosApp:build"
+            "browserTarget": "figueiraPhotoApp:build"
           }
         },
         "test": {
@@ -92,5 +92,5 @@
       }
     }
   },
-  "defaultProject": "coquitosApp"
+  "defaultProject": "figueiraPhotoApp"
 }

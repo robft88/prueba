@@ -20,7 +20,6 @@ import { PhotosService } from '../../services/photos.service';
 })
 export class PhotoDetailComponent implements OnInit {
   imageCtrl: string = 'hide-image';
-  contentCtrl: string = 'show-image';
 
   showPrueba: boolean = false;
 
@@ -61,7 +60,6 @@ export class PhotoDetailComponent implements OnInit {
     console.log("entra");
     this.showPrueba = true;
     this.imageCtrl = 'show-image';
-    this.contentCtrl = 'hide-image';
   }
 
 }

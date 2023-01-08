@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'coquitosApp'`, () => {
+  it(`should have as title 'figueiraPhotoApp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('coquitosApp');
+    expect(app.title).toEqual('figueiraPhotoApp');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('coquitosApp app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('figueiraPhotoApp app is running!');
   });
 });
