@@ -153,6 +153,11 @@ h4 {
   justify-content: center;
 }
 
+.info__link,
+.insta__btn {
+  color: var(--color-1);
+}
+
 .container {
   width: 100%;
   margin: 1rem 0 0 0;
@@ -164,7 +169,7 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   border-top: thin solid var(--color-6);
   border-bottom: thin solid var(--color-6);
 }

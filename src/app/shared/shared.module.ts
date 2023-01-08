@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProfileMinComponent } from './components/profile-min/profile-min.component';
+import { LoaderImageComponent } from './components/loader-image/loader-image.component';
 
 
 
@@ -10,12 +11,14 @@ import { ProfileMinComponent } from './components/profile-min/profile-min.compon
   declarations: [
     ProfileInfoComponent,
     HeaderComponent,
-    ProfileMinComponent
+    ProfileMinComponent,
+    LoaderImageComponent
   ],
   exports: [
     ProfileInfoComponent,
     HeaderComponent,
-    ProfileMinComponent
+    ProfileMinComponent,
+    LoaderImageComponent
   ],
   imports: [
     CommonModule

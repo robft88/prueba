@@ -1,12 +1,28 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 import { Photo } from '../../interfaces/photo.interface';
 import { PhotosService } from '../../services/photos.service';
 
 @Component({
   selector: 'app-photo-detail',
-  templateUrl: './photo-detail.component.html'
+  templateUrl: './photo-detail.component.html',
+  animations: [
+    trigger('imageAnimation', [
+      state('show-image', style({
+        opacity: '1',
+      })),
+      state('hide-image', style({
+        opacity: '0'
+      })),
+      transition('show-image <=> hide-image', animate('500ms ease-in')),
+    ])
+  ]
 })
 export class PhotoDetailComponent implements OnInit {
+  imageCtrl: string = 'hide-image';
+  contentCtrl: string = 'show-image';
+
+  showPrueba: boolean = false;
 
   @Input() photo!: Photo;
 
@@ -39,6 +55,13 @@ export class PhotoDetailComponent implements OnInit {
 
   userAlreadyVoted() {
     return JSON.parse(localStorage.getItem('userHasVoted')!);
+  }
+
+  prueba() {
+    console.log("entra");
+    this.showPrueba = true;
+    this.imageCtrl = 'show-image';
+    this.contentCtrl = 'hide-image';
   }
 
 }
