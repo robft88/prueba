@@ -12,7 +12,10 @@ export class MainComponent implements OnInit {
   constructor(private ps: PhotosService) { }
 
   ngOnInit(): void {
-    this.photoList = this.ps.getPhotoList();
+    this.ps.getPhotoList1().subscribe(resp => {
+      this.photoList = resp;
+    })
+    // this.photoList = this.ps.getPhotoList();
     let local = '';
     // if (localStorage.getItem('userVote') != null) {
     //   this.photoList = JSON.parse(localStorage.getItem('userVote')!);
@@ -28,8 +31,8 @@ export class MainComponent implements OnInit {
   }
 
   sendInfo() {
-    alert('enviando info...');
     localStorage.setItem('userVote', JSON.stringify(this.ps.userLikesList));
     localStorage.setItem('userHasVoted', JSON.stringify(true));
+    this.ps.saveVotes(this.ps.userLikesList);
   }
 }

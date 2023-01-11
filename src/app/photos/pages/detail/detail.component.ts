@@ -12,12 +12,14 @@ export class DetailComponent implements OnInit {
 
   photo!: Photo;
 
-  constructor(private activatedRoute: ActivatedRoute, private ps: PhotosService) { }
+  constructor(private activatedRoute: ActivatedRoute, private ps: PhotosService) {
+
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params
       .pipe(
-        switchMap(({ id }) => this.ps.getPhotoById(parseInt(id)))
+        switchMap(({ id }) => this.ps.getPhotoById1(parseInt(id)))
       )
       .subscribe(photo => this.photo = photo[0]);
   }

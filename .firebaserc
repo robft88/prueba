@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "figueiraphotoapp": {
+      "hosting": {
+        "figueiraPhotoApp": [
+          "figueiraphotoapp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "figueiraphotoapp"
+  }
+}

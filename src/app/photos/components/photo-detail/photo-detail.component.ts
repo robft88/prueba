@@ -28,7 +28,6 @@ export class PhotoDetailComponent implements OnInit {
   constructor(private ps: PhotosService) { }
 
   ngOnInit(): void {
-
   }
 
   /**

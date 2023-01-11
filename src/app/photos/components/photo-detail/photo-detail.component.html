@@ -1,8 +1,11 @@
 <section class="photo-container">
-    <figure [ngClass]="{'liked': checkIfLike(photo.id)}" class="detail">
-        <img (load)="prueba()" class="detail__img" [@imageAnimation]="imageCtrl"
-            src="../../../../assets/img/{{photo.id}}.jpg" alt="{{photo.title}}">
-    </figure>
+    <!-- <figure > -->
+    <!-- <img (load)="prueba()" class="detail__img" [@imageAnimation]="imageCtrl" src="{{photo.urlPhoto}}"
+            alt="{{photo.title}}"> -->
+    <image-async [ngClass]="{'liked': checkIfLike(photo.id)}" class="detail" [cssClassChild]="'detail__img'"
+        [imageUrl]="photo.urlPhoto" [imageName]="photo.title">
+    </image-async>
+    <!-- </figure> -->
     <section class="detail__info">
         <button (click)="giveLike(photo)" [disabled]="userAlreadyVoted()">
             <i *ngIf="!checkIfLike(photo.id)" class="fa-regular fa-heart heart heart-no-like"></i>

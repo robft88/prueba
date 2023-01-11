@@ -1,7 +1,6 @@
 export interface Vote {
-    id: string;
+    $key?: string;
     idPhoto: number;
     title: string;
-    date: Date;
-    votes?: number;
+    date: number;
 }

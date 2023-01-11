@@ -1,6 +1,7 @@
 <section class="profile">
     <figure class="profile__header">
-        <img class="profile__photo" src="../../../../assets/img/profile-photo.jpg" alt="">
+        <image-async [cssClassChild]="'profile__photo'" [imageUrl]="'../../../../assets/img/profile-photo.jpg'"
+            [imageName]="'profile-photo'"></image-async>
         <section class="profile__nav">
             <h2 class="nav__title">@figueiraphoto.art</h2>
             <div class="nav__btns">
@@ -18,10 +19,6 @@
         <h4 class="info__name">Miguel Figueira</h4>
         <span class="info__slogan">Artista</span>
         <div class="info__description">
-            <!-- <span>Fotógrafo</span>
-            <span>Digital Art Studio ✍🏻</span>
-            <span>Portrait || FreeStyle || Social Events</span>
-            <span>Architect degree - Madrid📍 - Born Venezuelan</span> -->
             <a class="info__link" rel="noreferrer noopener" target="_blank"
                 href="https://figueiraphoto.es/">www.figueiraphoto.es</a>
         </div>

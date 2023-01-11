@@ -1,11 +1,12 @@
 
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
-import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Photo } from 'src/app/photos/interfaces/photo.interface';
+import { PhotosService } from 'src/app/photos/services/photos.service';
 
 @Component({
   selector: 'image-async',
   templateUrl: './loader-image.component.html',
-  styleUrls: ['./loader-image.component.css'],
   animations: [
     trigger('imageAnimation', [
       state('show-image', style({
@@ -20,27 +21,26 @@ import { animate, keyframes, state, style, transition, trigger } from '@angular/
 })
 export class LoaderImageComponent implements OnInit {
   imageCtrl: string = 'hide-image';
-  contentCtrl: string = 'show-image';
 
-  @Input('url') set url(url: string) {
-    if (url) {
-      this.loadImage(url);
-    }
+  showPrueba: boolean = false;
+
+  @Input() imageUrl!: string;
+  @Input() imageName!: string;
+  @Input() cssClassChild!: string;
+
+
+  constructor(private ps: PhotosService) { }
+
+  ngOnInit() { }
+
+
+
+  prueba() {
+    this.showPrueba = true;
+    this.imageCtrl = 'show-image';
   }
-  @ViewChild('lImage') lImage!: ElementRef;
 
-  constructor() { }
-
-  ngOnInit() {
-    this.lImage.nativeElement.onload = () => {
-      this.imageCtrl = 'show-image';
-      this.contentCtrl = 'hide-image';
-    }
-  }
-
-  loadImage(urlImage: string) {
-    this.imageCtrl = 'hide-image';
-    this.contentCtrl = 'show-image';
-    this.lImage.nativeElement.src = urlImage;
+  setAltAttribute(): string {
+    return this.ps.setAltAttribute(this.imageName);
   }
 }

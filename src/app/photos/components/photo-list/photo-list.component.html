@@ -1,6 +1,7 @@
 <a *ngFor="let photo of photoList" class="photo__btn" href="#" [routerLink]="['/photo/detail', photo.id]">
-    <figure class="photo" [ngClass]="{'liked': checkIfLike(photo.id)}">
-        <img class="photo__img" (load)="prueba()" [@imageAnimation]="imageCtrl"
-            src="../../../../assets/img/min-{{photo.id}}.jpg" alt="">
-    </figure>
+    <!-- <figure class="photo" [ngClass]="{'liked': checkIfLike(photo.id)}"> -->
+    <!-- <img class="photo__img" (load)="prueba()" [@imageAnimation]="imageCtrl" src="{{photo.urlPhotoMini}}" alt=""> -->
+    <image-async [ngClass]="{'liked': checkIfLike(photo.id)}" class="photo" [cssClassChild]="'photo__img'"
+        [imageUrl]="photo.urlPhotoMini" [imageName]="photo.title"></image-async>
+    <!-- </figure> -->
 </a>
