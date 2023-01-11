@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./photos/photos.module').then(m => m.PhotosModule)
   },
   {
-    path: 'admin',
+    path: 'S4p!3nz4-c0qU!t0',
     loadChildren: () => import('./charts/charts.module').then(m => m.ChartsModule)
   },
   {

@@ -16,12 +16,9 @@ export class TableComponent implements OnInit {
   constructor(private ps: PhotosService) { }
 
   ngOnInit(): void {
-
-    console.log(this.photos);
-
-
-    this.ps.getVotesForList().subscribe(data => {
-      this.photos = data;
+    this.ps.getVotes().subscribe(data => {
+      let hash = data;
+      this.photos = Object.keys(hash).map(el => ({ title: el, votes: hash[el] })).sort((a, b) => b.votes - a.votes);
     });
   }
 

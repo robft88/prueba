@@ -19,7 +19,7 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params
       .pipe(
-        switchMap(({ id }) => this.ps.getPhotoById1(parseInt(id)))
+        switchMap(({ id }) => this.ps.getPhotoById(parseInt(id)))
       )
       .subscribe(photo => this.photo = photo[0]);
   }

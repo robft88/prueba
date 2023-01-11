@@ -10,8 +10,8 @@ import { MenuItem } from '../../../photos/interfaces/menu-item.interface';
 export class MenuComponent implements OnInit {
 
   menu: MenuItem[] = [
-    { route: '/admin/chart', text: 'Gráfica', icon: 'fa-solid fa-chart-pie' },
-    { route: '/admin/table', text: 'Tabla', icon: 'fa-solid fa-list-ul' }
+    { route: '/S4p!3nz4-c0qU!t0/chart', text: 'Gráfica', icon: 'fa-solid fa-chart-pie' },
+    { route: '/S4p!3nz4-c0qU!t0/table', text: 'Tabla', icon: 'fa-solid fa-list-ul' }
   ];
 
   constructor() { }

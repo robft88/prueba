@@ -29,13 +29,10 @@ export class PhotoListComponent implements OnInit {
   constructor(private ps: PhotosService) { }
 
   ngOnInit(): void {
-    this.ps.getPhotoList1();
+    this.ps.getPhotoList();
   }
-  getDetailPhoto(id: any) { }
 
   checkIfLike(id: number) {
-    // console.log(id);
-    // console.log(this.ps.userLikesList);
     return this.ps.userLikesList.filter(photo => photo.id === id).length === 1;
   }
 

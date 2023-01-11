@@ -35,7 +35,7 @@ export class ChartComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.ps.getVotesForChart().subscribe(data => {
+    this.ps.getVotes().subscribe(data => {
       this.doughnutChartData = {
         labels: Object.keys(data),
         datasets: [

@@ -29,7 +29,6 @@ export class PhotoDetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   /**
    * Función que permite agregar o eliminar del localStorage la foto a la que se le dá like
    * @param photo Foto a la que se le da like
@@ -53,12 +52,6 @@ export class PhotoDetailComponent implements OnInit {
 
   userAlreadyVoted() {
     return JSON.parse(localStorage.getItem('userHasVoted')!);
-  }
-
-  prueba() {
-    console.log("entra");
-    this.showPrueba = true;
-    this.imageCtrl = 'show-image';
   }
 
 }

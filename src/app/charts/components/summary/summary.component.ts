@@ -21,11 +21,13 @@ export class SummaryComponent implements OnInit {
   constructor(private ps: PhotosService) { }
 
   ngOnInit(): void {
-    this.ps.getVotesForList().subscribe(data => {
-      this.totalVotes = data.reduce((acc, el) => acc + el.votes, 0);
-      this.totalPhotos = data.length;
-      this.moreVotes = data.slice(0, 3);
-      this.lessVotes = data.slice(this.totalPhotos - 3, this.totalPhotos);
+    this.ps.getVotes().subscribe(data => {
+      let hash = data;
+      let result: VoteToList[] = Object.keys(hash).map(el => ({ title: el, votes: hash[el] })).sort((a, b) => b.votes - a.votes);
+      this.totalVotes = result.reduce((acc, el) => acc + el.votes, 0) / 3;
+      this.totalPhotos = result.length;
+      this.moreVotes = result.slice(0, 3);
+      this.lessVotes = result.slice(this.totalPhotos - 3, this.totalPhotos);
     });
 
   }

@@ -12,14 +12,9 @@ export class MainComponent implements OnInit {
   constructor(private ps: PhotosService) { }
 
   ngOnInit(): void {
-    this.ps.getPhotoList1().subscribe(resp => {
+    this.ps.getPhotoList().subscribe(resp => {
       this.photoList = resp;
     })
-    // this.photoList = this.ps.getPhotoList();
-    let local = '';
-    // if (localStorage.getItem('userVote') != null) {
-    //   this.photoList = JSON.parse(localStorage.getItem('userVote')!);
-    // }
   }
   check3PhotosLike() {
     if (!localStorage.getItem('userVote')) return;
