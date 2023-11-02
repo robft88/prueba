@@ -1,0 +1,34 @@
+<div class="input-container">
+  <label class="input-label">{{ label }}</label>
+  <div
+    class="image"
+    [ngClass]="{
+      'round': shape === 'round',
+      'small': size === 'small',
+      'large': size === 'large'
+    }"
+  >
+    <img
+      *ngIf="imageUrl"
+      class="image-preview"
+      [src]="imageUrl"
+    >
+    <label
+      class="image-selector"
+      for="imageUploaded"
+      (click)="enableEditMode()"
+    >
+      <i
+        *ngIf="!imageUrl"
+        class="fa-solid fa-upload"
+      ></i>
+    </label>
+    <input
+      id="imageUploaded"
+      hidden
+      type="file"
+      accept="image/*"
+      (change)="imageSelected($event)"
+    >
+  </div>
+</div>

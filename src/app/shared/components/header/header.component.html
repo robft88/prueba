@@ -1,8 +1,21 @@
-<section class="header__top">
-    <span style="width: 1rem;">
-        <a (click)="backToMain()">
-            <i *ngIf="showBackBtn" class="fa-solid fa-chevron-left"></i>
-        </a>
+<section class="header-top">
+  <a
+    *ngIf="typeButton"
+    (click)="clickAction(typeButton)"
+  >
+    <i
+      class="fa-solid"
+      [ngClass]="(typeButton === 'back') ? 'fa-chevron-left' : (typeButton === 'menu') ? 'fa-bars' : ''"
+    ></i>
+  </a>
+  <h3>
+    {{ title }}
+    <span class="lowercase">
+      {{ version }}
     </span>
-    <h3>sapienza</h3>
+  </h3>
 </section>
+<app-sidenav-menu
+  [showPanel]="showMenu"
+  (onClick)="clickAction(typeButton)"
+></app-sidenav-menu>

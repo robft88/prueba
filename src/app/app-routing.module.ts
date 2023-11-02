@@ -3,16 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'photo',
+    path: 'photos',
     loadChildren: () => import('./photos/photos.module').then(m => m.PhotosModule)
   },
   {
     path: 'S4p!3nz4-c0qU!t0',
-    loadChildren: () => import('./charts/charts.module').then(m => m.ChartsModule)
+    loadChildren: () => import('./admin/admin.module').then(m => m.ChartsModule)
   },
   {
     path: '**',
-    redirectTo: 'photo'
+    redirectTo: 'photos'
   }
 ];
 

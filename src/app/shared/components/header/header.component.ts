@@ -1,19 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html'
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  @Input() showBackBtn!: boolean;
+  @Input() typeButton: 'menu' | 'back' | null = null;
+  @Input() title?: string;
+  @Input() version?: string;
+  @Input() navigateUrl?: string;
+  showMenu = false;
 
   constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
-  backToMain() {
-    this.router.navigate(['/photos']);
+  clickAction(typeButton: string | null) {
+    if (typeButton === 'menu') this.showMenu = !this.showMenu;
+    else if (typeButton === 'back') this.router.navigate([this.navigateUrl]);
+    else return;
   }
 }

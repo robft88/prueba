@@ -1,0 +1,26 @@
+.header {
+  width: 100%;
+}
+
+.action-call {
+  padding: var(--gap-lg);
+  border-top: thin solid var(--color-6);
+  border-bottom: thin solid var(--color-6);
+}
+
+.profile {
+  padding: var(--gap-lg) var(--gap-lg) 0 var(--gap-lg);
+}
+
+.container {
+  width: 100%;
+  margin: var(--gap-lg) 0 0 0;
+}
+
+.photos-container {
+  display: grid;
+  padding: 0.2rem 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.2rem;
+}

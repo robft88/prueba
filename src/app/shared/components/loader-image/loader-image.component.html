@@ -1,2 +1,7 @@
-<img (load)="prueba()" class="{{cssClassChild}}" [@imageAnimation]="imageCtrl" src="{{imageUrl}}"
-    [alt]="setAltAttribute()">
+<img
+  (load)="loadImage()"
+  class="{{cssClassChild}}"
+  [@imageAnimation]="imageCtrl"
+  src="{{imageUrl}}"
+  [alt]="setAltAttribute()"
+>

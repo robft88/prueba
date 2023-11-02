@@ -1,27 +1,29 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
+import { NgModule } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
-import { ProfileMinComponent } from './components/profile-min/profile-min.component';
 import { LoaderImageComponent } from './components/loader-image/loader-image.component';
+import { SidenavMenuComponent } from './components/sidenav-menu/sidenav-menu.component';
+import { RouterModule } from '@angular/router';
+import { PhotoPreviewComponent } from './components/photo-preview/photo-preview.component';
 
 
 
 @NgModule({
   declarations: [
-    ProfileInfoComponent,
     HeaderComponent,
-    ProfileMinComponent,
-    LoaderImageComponent
+    PhotoPreviewComponent,
+    LoaderImageComponent,
+    SidenavMenuComponent,
   ],
   exports: [
-    ProfileInfoComponent,
     HeaderComponent,
-    ProfileMinComponent,
-    LoaderImageComponent
+    PhotoPreviewComponent,
+    LoaderImageComponent,
+    SidenavMenuComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

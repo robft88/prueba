@@ -1,0 +1,4 @@
+.menu{
+  display: block;
+  margin: var(--gap-xl) 0 0 0;
+}

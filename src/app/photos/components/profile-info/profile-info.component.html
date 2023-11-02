@@ -1,0 +1,42 @@
+<ng-container *ngIf="profile">
+
+  <figure class="profile-header">
+    <image-async
+      [cssClassChild]="'profile-photo'"
+      [imageUrl]="profile.photo"
+      [imageName]="'profile-photo'"
+    ></image-async>
+    <section class="profile-nav">
+      <h2 class="nav-title">{{ profile.user }}</h2>
+      <div class="nav-buttons">
+        <a
+          class="button contact-button"
+          rel="noreferrer noopener"
+          [href]="profile.mailToHeader"
+        >
+          <span>Contactar</span>
+        </a>
+        <a
+          class="insta-button"
+          target="_blank"
+          rel="noreferrer noopener"
+          [href]="profile.instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+  </figure>
+  <article class="profile-info">
+    <h4 class="info-name">{{ profile.name }}</h4>
+    <span class="info-slogan">{{ profile.profession }}</span>
+    <div>
+      <a
+        class="info-link"
+        rel="noreferrer noopener"
+        target="_blank"
+        [href]="profile.webSide"
+      >{{ profile.webSideText }}</a>
+    </div>
+  </article>
+</ng-container>

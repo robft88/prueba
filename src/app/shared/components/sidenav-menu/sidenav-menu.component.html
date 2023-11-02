@@ -1,0 +1,18 @@
+<aside
+  class="panel"
+  [ngClass]="{'active': showPanel}"
+>
+  <section class="panel-header">
+    <a (click)="onClose()">
+      <i class="fa-solid fa-xmark fa-2x"></i>
+    </a>
+  </section>
+  <nav class="menu">
+    <a
+      *ngFor="let item of menuItems"
+      class="menu-item"
+      [routerLink]="[item.route]"
+      routerLinkActive="active"
+    >{{item.text}}</a>
+  </nav>
+</aside>

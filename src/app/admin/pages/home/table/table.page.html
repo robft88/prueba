@@ -1,0 +1,24 @@
+<div class="table-container">
+    <table
+      class="table"
+      *ngIf="photos"
+    >
+        <thead class="thead-dark">
+            <tr class="row">
+                <th class="cell">Posición</th>
+                <th class="cell">Título</th>
+                <th class="cell">Votos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr
+              *ngFor="let photo of photos; index as i"
+              class="row"
+            >
+                <th class="cell">{{ i+1 }}</th>
+                <td class="cell">{{ photo.title }}</td>
+                <td class="cell">{{ photo.votes }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

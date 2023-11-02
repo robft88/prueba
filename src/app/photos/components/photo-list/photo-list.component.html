@@ -1,4 +1,0 @@
-<a *ngFor="let photo of photoList" class="photo__btn" href="#" [routerLink]="['/photo/detail', photo.id]">
-    <image-async [ngClass]="{'liked': checkIfLike(photo.id)}" class="photo" [cssClassChild]="'photo__img'"
-        [imageUrl]="photo.urlPhotoMini" [imageName]="photo.title"></image-async>
-</a>

@@ -1,0 +1,29 @@
+.expandable-panel-container {
+  width: 100%;
+  height: 52px;
+}
+
+.expandable-panel-container.active {
+  transition: height 0.5s ease-out;
+  height: 100%;
+}
+
+.expandable-panel-title {
+  color: var(--color-1);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--gap-lg);
+}
+
+.panel-active {
+  border-radius: 10px 10px 0 0;
+  background-color: #ed495625;
+}
+
+i {
+  transition: transform 0.5s ease;
+}
+
+i.panel-is-active {
+  transform: rotate(180deg);
+}

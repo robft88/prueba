@@ -1,0 +1,32 @@
+.table-container {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 var(--gap-lg) 0;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+
+.thead-dark {
+  color: #fff;
+  background-color: #212529;
+  position: sticky;
+  top: 0;
+}
+
+.cell {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+tbody .row {
+  border-top: 1px solid #dee2e6;
+}
+
+tbody .row .cell:nth-child(2n) {
+  text-align: left;
+}

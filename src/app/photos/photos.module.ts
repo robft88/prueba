@@ -1,20 +1,20 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { PhotosRoutingModule } from './photos-routing.module';
-import { MainComponent } from './pages/main/main.component';
-import { DetailComponent } from './pages/detail/detail.component';
-import { PhotoListComponent } from './components/photo-list/photo-list.component';
-import { PhotoDetailComponent } from './components/photo-detail/photo-detail.component';
 import { SharedModule } from '../shared/shared.module';
+import { ActionCallComponent } from './components/action-call/action-call.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
+import { MainPage } from './pages/main/main.page';
+import { PhotosRoutingModule } from './photos-routing.module';
 
 
 @NgModule({
   declarations: [
-    MainComponent,
-    DetailComponent,
-    PhotoListComponent,
-    PhotoDetailComponent
+    ActionCallComponent,
+    FooterComponent,
+    MainPage,
+    ProfileInfoComponent,
   ],
   imports: [
     CommonModule,

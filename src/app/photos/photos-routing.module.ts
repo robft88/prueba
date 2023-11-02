@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailComponent } from './pages/detail/detail.component';
-import { MainComponent } from './pages/main/main.component';
+import { MainPage } from './pages/main/main.page';
 
 const routes: Routes = [
   {
-    path: 'list',
-    component: MainComponent,
-  },
-  { path: 'detail/:id', component: DetailComponent },
-  { path: '**', redirectTo: 'list' }
+    path: '',
+    component: MainPage,
+  }
 ];
 
 @NgModule({

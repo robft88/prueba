@@ -1,0 +1,15 @@
+<section class="vote">
+  <ng-template [ngIf]="!show">
+    <div class="vote-info">
+      <span class="vote-question">Selecciona las 3 fotos que más te gustan.</span>
+      <span class="vote-question">Solo puedes votar una vez.</span>
+      <span class="vote-question">¡Quiero conocer tu opinión!</span>
+      <span class="vote-question"><strong>#ExpoSapienza</strong></span>
+    </div>
+    <span class="action-call">¡Vota!</span>
+  </ng-template>
+  <ng-template [ngIf]="show">
+    <i class="fa-regular fa-face-smile"></i>
+    <span>Gracias por tu voto!</span>
+  </ng-template>
+</section>

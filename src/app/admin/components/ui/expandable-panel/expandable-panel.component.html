@@ -1,0 +1,19 @@
+<div
+  class="card expandable-panel-container"
+  [ngClass]="{'active': showPanel}"
+>
+  <div
+    class="expandable-panel-title"
+    [ngClass]="{'panel-active': showPanel}"
+    (click)="changePanelState(!showPanel)"
+  >
+    <span>{{ title }}</span>
+    <i
+      class="fa-solid fa-chevron-down"
+      [ngClass]="{
+        'panel-is-active': showPanel
+      }"
+    ></i>
+  </div>
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,34 @@
+<form [formGroup]="form">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <app-file-input
+      [imageUrl]="imageMiniUrl"
+      label="Foto mini"
+    ></app-file-input>
+    <app-file-input
+      [imageUrl]="imageUrl"
+      label="Foto detalle"
+    ></app-file-input>
+  </div>
+
+  <app-text-input
+    formControlName="title"
+    label="Titulo"
+  ></app-text-input>
+
+  <div
+    style="display: flex; justify-content: space-between; align-items: flex-start; gap: var(--gap-lg)"
+  >
+    <app-text-input
+      formControlName="format"
+      label="Formato"
+    ></app-text-input>
+    <app-text-input
+      formControlName="order"
+      label="Número orden"
+    ></app-text-input>
+    <app-check-input
+      formControlName="toShow"
+      label="Mostrar"
+    ></app-check-input>
+  </div>
+</form>

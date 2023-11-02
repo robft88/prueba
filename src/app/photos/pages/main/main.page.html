@@ -1,0 +1,24 @@
+<section class="header">
+  <app-header [title]="exhibitionName"></app-header>
+</section>
+<section class="profile">
+  <app-profile-info [profile]="profile"></app-profile-info>
+</section>
+<main class="container">
+  <section class="action-call">
+    <app-action-call [show]="userHasAlreadyVoted()"></app-action-call>
+  </section>
+  <section class="photos-container">
+    <app-photo-preview
+      *ngFor="let photo of photoList; trackBy: trackByItems"
+      [isSelected]="(imageSelected(photo.id) | async) !== -1"
+      [photo]="photo"
+      (onSelectImage)="toggleSelectImage(photo)"
+    ></app-photo-preview>
+  </section>
+  <app-footer
+    [emailMessage]="mailToFooter"
+    [photoSize]="profile?.photoSize"
+    [photoSizeText]="profile?.photoSizeText"
+  ></app-footer>
+</main>

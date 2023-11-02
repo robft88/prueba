@@ -1,0 +1,17 @@
+<ng-container *ngIf="photo">
+  <a (click)="onClick()">
+    <ng-content></ng-content>
+    <image-async
+      class="photo"
+      [ngClass]="{
+        'liked': isSelected,
+        'hide': isHidden,
+        'show': toShow,
+        'order': order
+      }"
+      [cssClassChild]="'photo-img'"
+      [imageUrl]="photo.urlPhotoMini"
+      [imageName]="photo.title"
+    ></image-async>
+  </a>
+</ng-container>

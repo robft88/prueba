@@ -1,0 +1,18 @@
+<div class="input-group">
+  <textarea
+    #input
+    rows="1"
+    [disabled]="disabled"
+    [ngClass]="{'invalid': invalid, 'data': value}"
+    [placeholder]="placeholder"
+    [value]="value"
+    (blur)="onTouched()"
+    (input)="onInput($event)"
+  ></textarea>
+  <span class="highlight"></span>
+  <span class="bar"></span>
+  <label>{{ label }}</label>
+</div>
+<div class="error">
+  <span *ngIf="invalid">Este campo es requerido</span>
+</div>

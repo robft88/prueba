@@ -1,0 +1,69 @@
+<form [formGroup]="form">
+  <div style="display: flex; justify-content: center;">
+    <app-file-input
+      label="Foto perfil"
+      shape="round"
+      [imageUrl]="profilePhoto"
+    ></app-file-input>
+  </div>
+  <app-text-input
+    formControlName="name"
+    label="Nombre y apellido"
+    [invalid]="form.controls['name'].invalid && form.controls['name'].touched"
+  ></app-text-input>
+  <app-text-input
+    formControlName="profession"
+    label="Profesión"
+    [invalid]="form.controls['profession'].invalid && form.controls['profession'].touched"
+  ></app-text-input>
+  <app-text-input
+    formControlName="user"
+    label="Usuario"
+    [invalid]="form.controls['user'].invalid && form.controls['user'].touched"
+  ></app-text-input>
+  <app-text-input
+    formControlName="instagram"
+    label="Link instagram"
+    [invalid]="form.controls['instagram'].invalid && form.controls['instagram'].touched"
+  ></app-text-input>
+  <app-text-input
+    formControlName="mailToHeader"
+    label="Cabecera mail"
+    [invalid]="form.controls['mailToHeader'].invalid && form.controls['mailToHeader'].touched"
+  ></app-text-input>
+  <!-- <app-text-input
+    formControlName="photo"
+    label="Foto perfil"
+    [invalid]="form.controls['photo'].invalid && form.controls['photo'].touched"
+  ></app-text-input> -->
+  <app-text-input
+    formControlName="photoSize"
+    label="Medidas fotos"
+    [invalid]="form.controls['photoSize'].invalid && form.controls['photoSize'].touched"
+  ></app-text-input>
+  <app-text-input
+    formControlName="photoSizeText"
+    label="Texto medidas foto"
+    [invalid]="form.controls['photoSizeText'].invalid && form.controls['photoSizeText'].touched"
+  ></app-text-input>
+  <app-text-input
+    formControlName="webSide"
+    label="Sitio Web URL"
+    [invalid]="form.controls['webSide'].invalid && form.controls['webSide'].touched"
+  ></app-text-input>
+  <app-text-input
+    formControlName="webSideText"
+    label="Texto sitio Web"
+    [invalid]="form.controls['webSideText'].invalid && form.controls['webSideText'].touched"
+  ></app-text-input>
+  <!-- <app-text-area
+    formControlName="prueba"
+    label="Prueba"
+    [invalid]="form.controls['prueba'].invalid && form.controls['prueba'].touched"
+  ></app-text-area> -->
+
+</form>
+
+<pre>{{form.value|json}}</pre>
+<pre>{{form.touched|json}}</pre>
+<pre>{{form.valid|json}}</pre>

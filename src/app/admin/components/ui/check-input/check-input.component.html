@@ -1,0 +1,14 @@
+<div class="container">
+  <label class="label">{{ label }}</label>
+  <div class="checkbox">
+    <input
+      type="checkbox"
+      [ngClass]="{'invalid': invalid, 'data': isChecked}"
+      [disabled]="disabled"
+      [checked]="isChecked"
+      (blur)="onTouched()"
+      (change)="onToggle($event)"
+    >
+    <label></label>
+  </div>
+</div>

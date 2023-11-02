@@ -1,0 +1,44 @@
+.exhibition-list-container {
+  padding: var(--gap-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exhibition {
+  display: inline-block;
+  padding: var(--gap-lg) 0;
+  border-bottom: thin solid #b5b5b5;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.exhibition-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-lg);
+}
+
+.exhibition-info {
+  width: 100%;
+}
+
+.exhibition-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date {
+  color: #8f8e8e;
+}
+
+.address-container {
+  color: #4b4b4b;
+}
+
+.chevron-icon {
+  color: #b5b5b5;
+}

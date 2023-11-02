@@ -1,0 +1,21 @@
+<ng-container *ngIf="!loading">
+  <app-header
+    [typeButton]="'back'"
+    [title]="exhibitionName"
+    [version]="version"
+    [navigateUrl]="'/S4p!3nz4-c0qU!t0/exhibitions'"
+  ></app-header>
+  <div class="content">
+    <app-summary
+      [leastVoted]="leastVoted"
+      [mostVoted]="mostVoted"
+      [totalPhotos]="totalPhotos"
+      [totalVotes]="totalVotes"
+    ></app-summary>
+    <app-menu
+      [menu]="menu"
+      class="menu"
+    ></app-menu>
+  </div>
+  <router-outlet></router-outlet>
+</ng-container>

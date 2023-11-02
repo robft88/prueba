@@ -1,0 +1,48 @@
+<app-header
+  typeButton="menu"
+  [title]="'Fotos'"
+></app-header>
+<div class="content">
+  <section class="button-container">
+    <button
+      class="button add-button"
+      (click)="navigateTo('/S4p!3nz4-c0qU!t0/photo/new')"
+    >
+      <i class="fa-solid fa-plus"></i>
+      Nueva foto
+    </button>
+  </section>
+  <section class="filter-container">
+    <app-expandable-panel
+      title="Filtros"
+      (onClick)="getPanelState($event)"
+    >
+      <div
+        class="expandable-panel-description"
+        [ngClass]="{'active': showPanel}"
+      >
+        <app-filter-form></app-filter-form>
+      </div>
+    </app-expandable-panel>
+  </section>
+  <section class="photos-container">
+    <a
+      *ngFor="let photo of photoList; trackBy: trackByItems"
+      [routerLink]="['/S4p!3nz4-c0qU!t0/photo', photo.id]"
+    >
+      <app-photo-preview [photo]="photo">
+        <div>
+          <span class="photo-order">{{ photo.order }}</span>
+          <i
+            *ngIf="photo.toShow"
+            class="fa-regular fa-eye photo-show"
+          ></i>
+          <i
+            *ngIf="!photo.toShow"
+            class="fa-regular fa-eye-slash photo-hide"
+          ></i>
+        </div>
+      </app-photo-preview>
+    </a>
+  </section>
+</div>

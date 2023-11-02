@@ -1,0 +1,30 @@
+<ng-container *ngIf="!loading">
+  <app-header
+    typeButton="menu"
+    [title]="exhibitionName"
+  ></app-header>
+  <section class="exhibition-list-container">
+    <a
+      class="exhibition"
+      *ngFor="let exhibition of exhibitions"
+      [routerLink]="['/S4p!3nz4-c0qU!t0/exhibitions',exhibition.code]"
+      (click)="changeCode(exhibition.code)"
+    >
+      <div class="exhibition-item">
+        <div class="exhibition-info">
+          <div class="exhibition-header">
+            <h3>{{ exhibition.name }} {{exhibition.version}}</h3>
+            <span class="date">
+              {{ exhibition.start| date:'dd/MM/YYYY' }} al {{ exhibition.end| date:'dd/MM/YYYY'}}
+            </span>
+          </div>
+          <div class="address-container">
+            <strong>{{ exhibition.location.name}}</strong>
+            <span> - {{ exhibition.location.address}}</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-chevron-right chevron-icon"></i>
+      </div>
+    </a>
+  </section>
+</ng-container>

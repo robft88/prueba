@@ -1,0 +1,14 @@
+.header-top {
+  padding: var(--gap-lg);
+  background-color: var(--color-1);
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-lg);
+}
+
+.lowercase {
+  text-transform: lowercase;
+}

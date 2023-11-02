@@ -1,0 +1,17 @@
+<div class="input-group">
+  <input
+    [ngClass]="{'invalid': invalid, 'data': value}"
+    [disabled]="disabled"
+    [placeholder]="placeholder"
+    [type]="type"
+    [value]="value"
+    (blur)="onTouched()"
+    (input)="onInput($event)"
+  />
+  <span class="highlight"></span>
+  <span class="bar"></span>
+  <label>{{ label }}</label>
+</div>
+<div class="error">
+  <span *ngIf="invalid">Este campo es requerido</span>
+</div>

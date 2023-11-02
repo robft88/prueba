@@ -1,0 +1,29 @@
+.footer-content {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-lg);
+  width: 100%;
+  color: var(--color-3);
+  padding: var(--gap-lg);
+  border-top: thin solid var(--color-6);
+}
+
+.footer-description {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: start;
+  gap: var(--gap-lg);
+}
+
+.email {
+  font-size: 1.5rem;
+  color: black;
+}

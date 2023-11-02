@@ -1,0 +1,47 @@
+.insta-button {
+  font-size: 2rem;
+}
+
+.contact-button {
+  font-weight: 600;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-lg);
+}
+
+.profile-info,
+.profile-nav {
+  padding: var(--gap-lg) 0 0 0;
+  font-size: 14px;
+  color: #262626;
+}
+
+.info-name {
+  text-transform: uppercase;
+}
+
+.info-slogan {
+  color: #b5b5b5;
+}
+
+.info-link,
+.insta-button {
+  color: var(--color-1);
+}
+
+.nav-title {
+  font-size: 24px;
+  margin: 0 0 12px 0;
+  font-weight: 300;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: var(--gap-lg);
+  justify-content: center;
+  align-items: center;
+  color: #262626;
+}

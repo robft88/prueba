@@ -1,0 +1,75 @@
+.photos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--gap-md);
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 var(--gap-lg) 0;
+}
+
+.add-button {}
+
+.filter-container {
+  display: flex;
+  width: 100%;
+  margin: 0 0 var(--gap-lg) 0;
+}
+
+app-expandable-panel {
+  flex: 1;
+}
+
+.expandable-panel-description {
+  padding: var(--gap-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-90px);
+}
+
+.expandable-panel-description.active {
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out 0.2s, visibility 0.5s ease-out 0.2s;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+app-photo-preview div {
+  position: relative;
+}
+
+.photo-order,
+.photo-show,
+.photo-hide {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  top: 24px;
+  right: -7px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  animation: showUp 1000ms ease-in;
+  z-index: 99;
+  background-color: #ffffffed;
+  color: #000;
+  box-shadow: 0px 0px 6px 0px #767676;
+}
+
+.photo-show {
+  top: -7px;
+  background-color: #7c9a7c;
+  color: #008000;
+}
+
+.photo-hide {
+  top: -7px;
+  background-color: #f69393;
+  color: #ff0000;
+}

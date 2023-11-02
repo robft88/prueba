@@ -1,12 +1,12 @@
 
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Photo } from 'src/app/photos/interfaces/photo.interface';
-import { PhotosService } from 'src/app/photos/services/photos.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { UtilService } from '../../../utils/services/util.service';
 
 @Component({
   selector: 'image-async',
   templateUrl: './loader-image.component.html',
+  styleUrls: ['./loader-image.component.css'],
   animations: [
     trigger('imageAnimation', [
       state('show-image', style({
@@ -29,18 +29,18 @@ export class LoaderImageComponent implements OnInit {
   @Input() cssClassChild!: string;
 
 
-  constructor(private ps: PhotosService) { }
+  constructor(
+    private utilService: UtilService,
+  ) { }
 
   ngOnInit() { }
 
-
-
-  prueba() {
+  loadImage() {
     this.showPrueba = true;
     this.imageCtrl = 'show-image';
   }
 
   setAltAttribute(): string {
-    return this.ps.setAltAttribute(this.imageName);
+    return this.utilService.setAltAttribute(this.imageName);
   }
 }
